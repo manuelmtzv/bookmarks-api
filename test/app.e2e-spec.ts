@@ -221,8 +221,7 @@ describe("App e2e", () => {
           .get("/bookmarks/{id}")
           .withPathParams("id", "$S{bookmarkId}")
           .withBearerToken(`$S{userAt}`)
-          .expectStatus(200)
-          .inspect();
+          .expectStatus(200);
       });
     });
 
